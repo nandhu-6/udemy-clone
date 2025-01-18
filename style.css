@@ -1,0 +1,161 @@
+*{
+    /*setting margin and padding of everything to zero*/
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Gabarito',sans-serif;
+} 
+
+.navbar{
+    padding: 10px;
+    display: flex; /*sets three sections side by side*/
+    justify-content: space-between; /*makes 3 sections of navbar to display as 3 separate entities one at left most, one at right most, and the other at middle*/
+    border-bottom: solid black 1px;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar__s1__title{
+    color: #A435F0;
+}
+
+.navbar__s2{
+    padding:10px;
+    border:solid black 1px;
+    border-radius: 30px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /*gap => gap bw search icon and placeholder
+    display : flex => icon and placeholder were placed in next next lines, to set it in same line i used flex
+    width 100% => extends search bar max length
+    */
+}
+
+.navbar__s2 input{
+    border: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+.navbar__s2 input:focus{
+    outline: none;
+    /*This removes the outline box*/
+    /*focus is a pseudo class like hover*/
+}
+
+.navbar__s3{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.categories{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: solid black 1px;
+}
+
+.categories p{
+    background-color: #A435F0;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.sale-image img{
+    width: 100%;
+    /*Setting width to 100% makes sure that 
+    if image is more than the size of div container, 
+    it will not extend beyond div container
+    hence setting it to 100% will set the size of image to its parent size(div container)*/
+}
+
+.recommended{
+    padding: 10px;
+}
+
+.recommended__container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    /* flex wrap => is u make screen smaller then the content will adjust itself to next next line below */
+    
+}
+
+.course-card{
+    width: 300px;
+    padding-bottom: 10px;
+}
+
+.course-card img{
+    width: 100%;
+}
+
+.topics__title{
+    padding: 10px;
+}
+
+.topics__container{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+
+.topics__container p{
+    border: solid gray 1px;
+    padding: 10px;
+    flex-basis: 25%; /*this sets only three boxes in a row => in whichever screen you view*/
+    /*For flex basis to work enable flex-wrap = wrap in parent container*/
+    flex-grow: 1; /*This elongates all boxes so that it occupies the whole screen*/
+}
+
+.popular{
+    padding: 10px;
+}
+
+.popular__container{
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* .popular__course-card{
+    width: 200px;
+}
+
+.popular__course-card img{
+    width: 100%;
+} */
+ .footer{
+    background:#111116;
+    color: white;
+ }
+
+.footer__one{
+    padding: 30px;
+    display: flex;
+    border-bottom: solid white 1px;
+    justify-content: space-between;
+}
+
+.footer__one p{
+    margin-bottom: 5;
+}
+
+.footer__two{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
