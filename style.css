@@ -15,6 +15,11 @@ body{
     border-bottom: solid black 1px;
     gap: 10px;
     align-items: center;
+
+    background: white;
+    position:sticky;
+    top: 0px;
+    z-index: 1; /*navbar layers to front*/
 }
 
 .navbar__s1__title{
@@ -52,6 +57,26 @@ body{
     gap: 10px;
     align-items: center;
 }
+.myLearning{
+    position: relative;
+    cursor: pointer;
+}
+
+.myLearning__popup{
+    display: none;
+    border:solid black 1px;
+    padding: 20px;
+    width : 100px;
+    position: absolute;
+    background: white;
+    top : 150%;
+    right: 0; /*this helps to fit the box straight to my learning element from right*/
+    /* display: none; */
+}
+
+.myLearning:hover .myLearning__popup{
+    display: block;
+}
 
 .categories{
     display: flex;
@@ -65,6 +90,10 @@ body{
     color: white;
     padding: 10px;
     border-radius: 20px;
+    
+}
+.sale-image{
+    position : relative;
 }
 
 .sale-image img{
@@ -73,6 +102,22 @@ body{
     if image is more than the size of div container, 
     it will not extend beyond div container
     hence setting it to 100% will set the size of image to its parent size(div container)*/
+
+}
+
+.sale-image__banner{
+    box-shadow: 0 2px 4px rgba(6, 17, 118, .08), 0 4px 12px rgba(6, 17, 118, .08);
+    background: white;
+    position : absolute;
+    top : 15%;
+    left: 10%;
+    padding: 30px;
+    width: 350px;
+    height : 100px;
+}
+.sale-image__banner p{
+    padding-top: 10px;
+
 }
 
 .recommended{
