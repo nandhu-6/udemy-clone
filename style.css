@@ -1,34 +1,37 @@
-*{
+* {
     /*setting margin and padding of everything to zero*/
     margin: 0;
     padding: 0;
 }
 
-body{
-    font-family: 'Gabarito',sans-serif;
-} 
+body {
+    font-family: 'Gabarito', sans-serif;
+}
 
-.navbar{
+.navbar {
     padding: 10px;
-    display: flex; /*sets three sections side by side*/
-    justify-content: space-between; /*makes 3 sections of navbar to display as 3 separate entities one at left most, one at right most, and the other at middle*/
+    display: flex;
+    /*sets three sections side by side*/
+    justify-content: space-between;
+    /*makes 3 sections of navbar to display as 3 separate entities one at left most, one at right most, and the other at middle*/
     border-bottom: solid black 1px;
     gap: 10px;
     align-items: center;
 
     background: white;
-    position:sticky;
+    position: sticky;
     top: 0px;
-    z-index: 1; /*navbar layers to front*/
+    z-index: 1;
+    /*navbar layers to front*/
 }
 
-.navbar__s1__title{
+.navbar__s1__title {
     color: #A435F0;
 }
 
-.navbar__s2{
-    padding:10px;
-    border:solid black 1px;
+.navbar__s2 {
+    padding: 10px;
+    border: solid black 1px;
     border-radius: 30px;
     width: 60%;
     display: flex;
@@ -40,63 +43,71 @@ body{
     */
 }
 
-.navbar__s2 input{
+.navbar__s2 input {
     border: none;
     font-size: 16px;
     width: 100%;
 }
 
-.navbar__s2 input:focus{
+.navbar__s2 input:focus {
     outline: none;
     /*This removes the outline box*/
     /*focus is a pseudo class like hover*/
 }
 
-.navbar__s3{
+.navbar__s3 {
     display: flex;
     gap: 10px;
     align-items: center;
 }
-.myLearning{
+
+.myLearning {
     position: relative;
     cursor: pointer;
 }
 
-.myLearning__popup{
+.myLearning__popup {
     display: none;
-    border:solid black 1px;
+    border: solid black 1px;
     padding: 20px;
-    width : 100px;
+    width: 100px;
     position: absolute;
     background: white;
-    top : 150%;
-    right: 0; /*this helps to fit the box straight to my learning element from right*/
+    top: 150%;
+    right: 0;
+    /*this helps to fit the box straight to my learning element from right*/
     /* display: none; */
 }
 
-.myLearning:hover .myLearning__popup{
+.myLearning:hover .myLearning__popup {
     display: block;
 }
 
-.categories{
+.categories {
     display: flex;
     justify-content: space-around;
     padding: 10px;
     border-bottom: solid black 1px;
 }
 
-.categories p{
+.categories p {
     background-color: #A435F0;
     color: white;
     padding: 10px;
     border-radius: 20px;
-    
+    border: solid grey 1px;
+    cursor: pointer;
 }
-.sale-image{
-    position : relative;
+.categories p:hover{
+    background-color: transparent;
+    color: #A435F0;
 }
 
-.sale-image img{
+.sale-image {
+    position: relative;
+}
+
+.sale-image img {
     width: 100%;
     /*Setting width to 100% makes sure that 
     if image is more than the size of div container, 
@@ -105,48 +116,63 @@ body{
 
 }
 
-.sale-image__banner{
+.sale-image__banner {
     box-shadow: 0 2px 4px rgba(6, 17, 118, .08), 0 4px 12px rgba(6, 17, 118, .08);
     background: white;
-    position : absolute;
-    top : 15%;
+    position: absolute;
+    top: 15%;
     left: 10%;
     padding: 30px;
     width: 350px;
-    height : 100px;
+    height: 100px;
+    opacity: 0;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
-.sale-image__banner p{
+
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.sale-image__banner p {
     padding-top: 10px;
-
 }
 
-.recommended{
+.recommended {
     padding: 10px;
 }
 
-.recommended__container{
+.recommended__container {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
     flex-wrap: wrap;
     /* flex wrap => is u make screen smaller then the content will adjust itself to next next line below */
-    
+
 }
 
-.course-card{
+.course-card {
     width: 300px;
     padding-bottom: 10px;
 }
 
-.course-card img{
+.course-card img {
     width: 100%;
 }
 
-.topics__title{
+.topics__title {
     padding: 10px;
 }
 
-.topics__container{
+.topics__container {
     padding: 10px;
     display: flex;
     gap: 10px;
@@ -154,19 +180,21 @@ body{
 
 }
 
-.topics__container p{
+.topics__container p {
     border: solid gray 1px;
     padding: 10px;
-    flex-basis: 25%; /*this sets only three boxes in a row => in whichever screen you view*/
+    flex-basis: 25%;
+    /*this sets only three boxes in a row => in whichever screen you view*/
     /*For flex basis to work enable flex-wrap = wrap in parent container*/
-    flex-grow: 1; /*This elongates all boxes so that it occupies the whole screen*/
+    flex-grow: 1;
+    /*This elongates all boxes so that it occupies the whole screen*/
 }
 
-.popular{
+.popular {
     padding: 10px;
 }
 
-.popular__container{
+.popular__container {
     display: flex;
     margin-top: 10px;
     flex-wrap: wrap;
@@ -180,27 +208,25 @@ body{
 .popular__course-card img{
     width: 100%;
 } */
- .footer{
-    background:#111116;
+.footer {
+    background: #111116;
     color: white;
- }
+}
 
-.footer__one{
+.footer__one {
     padding: 30px;
     display: flex;
     border-bottom: solid white 1px;
     justify-content: space-between;
 }
 
-.footer__one p{
+.footer__one p {
     margin-bottom: 5;
 }
 
-.footer__two{
+.footer__two {
     padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-
